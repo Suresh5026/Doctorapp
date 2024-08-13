@@ -40,13 +40,13 @@ userRouter.post("/login", async (req, res) => {
       return res.status(400).json({ message: "Invalid Password" });
     }
     const token = jwt.sign(
-      { _id: user._id, status: user.status, name : user.name },
+      { _id: user._id, status: user.status, name : user.name, email: user.email },
       process.env.TOKEN_SECRET,
       { expiresIn: "1h" }
     );
     return res
       .status(200)
-      .json({ token,_id: user._id, status: user.status, name: user.name, message: "Login Successful" });
+      .json({ token,_id: user._id, status: user.status, name: user.name, email: user.email, message: "Login Successful" });
   } catch (error) {
     return res.status(500).json({ message: error.message });
   }

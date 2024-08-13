@@ -103,8 +103,6 @@ router.get('/getAppointmentsByDoctor/:doctorId', async (req, res) => {
       res.status(500).json({ error: error.message });
     }
   });
-  
-  
 
   
   router.put('/approveBooking/:doctorId', async (req, res) => {
