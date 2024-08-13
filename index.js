@@ -10,7 +10,7 @@ const app = express();
 connectMongodb();
 app.use(bodyParser.json());
 app.use(cors({
-    origin: 'http://localhost:5173', 
+    origin: 'https://marvelous-sunflower-c66c1c.netlify.app', 
     credentials: true
 }))
 
