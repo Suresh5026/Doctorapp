@@ -3,8 +3,8 @@ const cors = require('cors');
 const bodyParser = require('body-parser');
 require('dotenv').config();
 const {connectMongodb} = require('./Database/db');
-const PORT = 8000;
-const HOSTNAME = 'localhost';
+const PORT = process.env.PORT;
+const HOSTNAME = process.env.HOSTNAME;
 
 const app = express();
 connectMongodb();
