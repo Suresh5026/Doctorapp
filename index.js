@@ -10,7 +10,7 @@ const app = express();
 connectMongodb();
 app.use(bodyParser.json());
 app.use(cors({
-    origin: 'http://localhost:5173', 
+    origin: 'https://doctorapp13aug.netlify.app', 
     credentials: true
 }))
 
