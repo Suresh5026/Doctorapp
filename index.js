@@ -10,7 +10,7 @@ const app = express();
 connectMongodb();
 app.use(bodyParser.json());
 app.use(cors({
-    origin: 'https://neon-conkies-99718a.netlify.app', 
+    origin: 'https://serene-capybara-8e195f.netlify.app', 
     credentials: true
 }))
 
